@@ -21,7 +21,7 @@ public class SecondActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
-        Caradapter adapter = new CarAdapter(cars, this);
+        CarAdapter adapter = new CarAdapter(this, cars);
 
         recyclerView.setAdapter(adapter);
     }
@@ -30,7 +30,9 @@ public class SecondActivity extends AppCompatActivity {
 
         cars = new ArrayList<>();
 
-        cars.add(new Car());
+        cars.add(new Car("Porsche Cayenne", "среднеразмерный кроссовер премиум класса", "300 км/ч", R.drawable.cayenne));
+        cars.add(new Car("Infiniti FX37", "кроссовер класса люкс, объединивший в себе внешность спорткара и внедорожника", "233 км/ч", R.drawable.fx_37s));
+        cars.add(new Car("Nissan Skyline GT-R 34", "среднеразмерный спортивный автомобиль с более чем 50-летней историей производства", "315 км/ч", R.drawable.r34));
 
     }
 
